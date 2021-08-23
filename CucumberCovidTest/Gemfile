@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "watir"
+gem "cucumber"
+gem "rspec"
+gem "httparty"
+gem "faker"
+gem "date"
+gem "json-schema-rspec", "~> 0.0.4"
+gem "json_matchers"
+# git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"

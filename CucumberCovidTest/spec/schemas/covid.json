@@ -1,0 +1,110 @@
+{
+  "$schema": "https://disease.sh/apidocs/swagger_v3.json#/components/schemas/covidCountry",
+  "description": "Get COVID-19 totals for a specific country",
+  "type": "object",
+  "properties": {
+    "updated": {
+      "type": "number"
+    },
+    "country": {
+      "type": "string",
+      "in": "path",
+      "required": true,
+      "description": "A country name, iso2, iso3, or country ID code"
+    },
+    "countryInfo": {
+      "_id": {
+        "type": "number"
+      },
+      "iso2": {
+        "type": "string"
+      },
+      "iso3": {
+        "type": "string"
+      },
+      "lat": {
+        "type": "number"
+      },
+      "long": {
+        "type": "number"
+      },
+      "flag": {
+        "type": "string"
+      }
+    },
+    "cases": {
+      "type": "number"
+    },
+    "todayCases": {
+      "type": "number"
+    },
+    "deaths": {
+      "type": "number"
+    },
+    "todayDeaths": {
+      "type": "number"
+    },
+    "recovered": {
+      "type": "number"
+    },
+    "todayRecovered": {
+      "type": "number"
+    },
+    "active": {
+      "type": "number"
+    },
+    "critical": {
+      "type": "number"
+    },
+    "casesPerOneMillion": {
+      "type": "number"
+    },
+    "deathsPerOneMillion": {
+      "type": "number"
+    },
+    "tests": {
+      "type": "number"
+    },
+    "testsPerOneMillion": {
+      "type": "number"
+    },
+    "population": {
+      "type": "number"
+    },
+    "continent": {
+      "type": "number"
+    },
+    "oneCasePerPeople": {
+      "type": "number"
+    },
+    "oneDeathPerPeople": {
+      "type": "number"
+    },
+    "oneTestPerPeople": {
+      "type": "number"
+    },
+    "activePerOneMillion": {
+      "type": "number"
+    },
+    "recoveredPerOneMillion": {
+      "type": "number"
+    },
+    "criticalPerOneMillion": {
+      "type": "number"
+    }
+  },
+  "responses": {
+    "code": 200,
+      "status": {
+      "description": "Status OK",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/covidCountry"
+          }
+        }
+      }
+    }
+  },
+  "required": "country"
+}
